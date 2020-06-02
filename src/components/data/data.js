@@ -25,7 +25,7 @@ function Datarender(){
                     vecesprendido: temp.vecesprendido,
                     masinfo : "aca esta la info",
                     pos : (i+1), 
-                    link : `sensor/${i+1}`
+                    link : `/Proyect-Herramientas/sensor/${i+1}`
                 }
             }
             setValor(data)

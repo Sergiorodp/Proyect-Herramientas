@@ -47,7 +47,7 @@ const Card = React.memo( function Card({params}){
                     </Suspense>
                 </div>
             <div className = "card-footer">
-                <a href = '/'>pagina principal</a>
+                <a href = '/Proyect-Herramientas/'>pagina principal</a>
         </div>
     </div>
     )
