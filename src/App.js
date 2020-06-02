@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <section className="App-content col-md-10 offset-md-1">
-        <Route path="/sensor/:key" component = {Card} />
-        <Route path = '/' component = {Datarender}/>
+        <Route path="/Proyect-Herramientas/sensor/:key" component = {Card} />
+        <Route path = '/Proyect-Herramientas/' component = {Datarender}/>
       </section>
     </div>
   );
