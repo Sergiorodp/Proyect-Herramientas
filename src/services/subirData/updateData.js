@@ -1,5 +1,5 @@
 import getData from '../consult'
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 
 
 function UpdateData(props){
@@ -10,15 +10,21 @@ function UpdateData(props){
 
 function GetdataProps(props){
     
-    const [GetD, setGetD] = useState(false)
+    const [GetD, setGetD] = useState({state : false})
 
-    getData().ref(`Leds/N${props.num}`).on("value",snap =>{
-        const Data = snap.val()
-        console.log(Data);
-        setGetD(Data)
-    })
+    console.log(props)
 
-    return(GetD)
+    useEffect(() => {
+        if(props !== 0){
+            getData().ref(`Leds/N${props}`).on("value",snap =>{
+                const Data = snap.val()
+                console.log(Data);
+                setGetD(Data)
+            })
+        }
+        },[props])
+
+    return(GetD.state)
 }
 
 export {GetdataProps}
